@@ -2000,7 +2000,7 @@ Show # $type->waystones $tier->enchanted
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255
 	SetBackgroundColor 180 45 123 255
-	PlayAlertSound 5 300
+	PlayAlertSound 12 300
 	PlayEffect Pink
 	MinimapIcon 1 Pink Square
 
@@ -2032,6 +2032,7 @@ Show # $type->waystones $tier->waystone_t15
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 235 235 235 255
 	PlayEffect White
+	PlayAlertSound 12 300
 	MinimapIcon 1 White Square
 
 # !! Waypoint c9.waystone.generic.t14 : "Waystones - t12-t14"
