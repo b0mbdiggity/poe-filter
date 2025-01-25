@@ -1996,16 +1996,21 @@ Show # $type->waystones $tier->deco_corruptedmod
 Show # $type->waystones $tier->enchanted
 	AnyEnchantment True
 	Class == "Waystones"
-	SetBorderColor 250 0 0 255
-SetBackgroundColor 0 43 118
-WaystoneTier >= 14
+	WaystoneTier >= 14
+	SetTextColor 255 255 255 255
+	SetBorderColor 255 255 255 255
+	SetBackgroundColor 180 45 123 255
+	PlayAlertSound 5 300
+	PlayEffect Pink
+	MinimapIcon 1 Pink Square
 
 Show # $type->waystones $tier->corrupted8
 	Corrupted True
+	WaystoneTier >= 15
 	Class == "Waystones"
 	HasExplicitMod >=7 "a" "o" "e" "u" "i" "y"
 	SetBorderColor 250 0 0 255
-WaystoneTier >= 15
+
 
 #------------------------------------
 #   [2203] Waystone progression
@@ -2026,9 +2031,8 @@ Show # $type->waystones $tier->waystone_t15
 	Class == "Waystones"
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 235 235 235 255
-	PlayAlertSound 5 300
-	PlayEffect Yellow
-	MinimapIcon 1 Red Square
+	PlayEffect White
+	MinimapIcon 1 White Square
 
 # !! Waypoint c9.waystone.generic.t14 : "Waystones - t12-t14"
 
