@@ -1469,7 +1469,7 @@ Hide # %H4 $type->sockets->runes $tier->levelingrunes
 #	PlayEffect White
 #	MinimapIcon 1 Yellow Circle
 
-Hide # %H5 $type->sockets->runes $tier->t2
+Show # %H5 $type->sockets->runes $tier->t2
 	Class == "Socketable"
 	BaseType == "Iron Rune"
 	SetFontSize 40
@@ -2711,7 +2711,7 @@ Show # $type->fragments->generic $tier->b
 	MinimapIcon 1 Yellow Hexagon
 
 Show # $type->fragments->generic $tier->c
-	BaseType == "Breach Precursor Tablet" "Expedition Precursor Tablet" "Overseer Precursor Tablet"
+	BaseType == "Breach Precursor Tablet" "Expedition Precursor Tablet" "Overseer Precursor Tablet" "Delirium Precursor Tablet" 
 	SetFontSize 42
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
