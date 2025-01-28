@@ -1693,13 +1693,13 @@ Show # $type->gems->uncut $tier->skill20
 
 # Level19
 
-Hide # %H5 $type->gems->uncut $tier->spirit19
-	ItemLevel 19
-	BaseType == "Uncut Spirit Gem"
-	SetFontSize 42
-	SetTextColor 20 240 240
-	SetBorderColor 20 240 240
-	SetBackgroundColor 6 0 60
+Show # %H5 $type->gems->uncut $tier->spirit19
+ItemLevel 19
+BaseType == "Uncut Spirit Gem"
+SetFontSize 42
+SetTextColor 20 240 240
+SetBorderColor 20 240 240
+SetBackgroundColor 6 0 60
 
 Hide # %H5 $type->gems->uncut $tier->skill19
 	ItemLevel 19
@@ -2218,7 +2218,7 @@ Show # $type->currency $tier->c
 
 Show # %H5 $type->currency $tier->d
 Class == "Stackable Currency"
-BaseType == "Armourer's Scrap" "Chance Shard" "Glassblower's Bauble" "Orb of Alchemy" "Blacksmith's Whetstone"
+BaseType == "Armourer's Scrap" "Chance Shard" "Glassblower's Bauble" "Orb of Alchemy" "Vaal Orb" "Blacksmith's Whetstone"
 SetFontSize 40
 SetTextColor 0 0 0 255
 SetBorderColor 0 0 0 255
@@ -2226,7 +2226,7 @@ SetBackgroundColor 210 178 135 255
 
 Hide # %H3 $type->currency $tier->e
 	Class == "Stackable Currency"
-	BaseType == "Arcanist's Etcher" "Lesser Jeweller's Orb" "Regal Orb" "Artificer's Orb" "Vaal Orb"
+	BaseType == "Arcanist's Etcher" "Lesser Jeweller's Orb" "Regal Orb" "Artificer's Orb"
 	SetFontSize 40
 	SetTextColor 240 207 132
 	SetBorderColor 240 207 132
