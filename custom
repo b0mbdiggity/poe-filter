@@ -486,7 +486,7 @@ Hide  # $type->endgame->conditionalhiders->crafting $tier->hideweaponsbytype
 Mirrored False
 Corrupted False
 Rarity Normal Magic Rare
-Class == "One Hand Maces" "Two Hand Maces"
+Class == "One Hand Maces" "Two Hand Maces" "Quarterstaves" "Staves" "Foci" "Crossbows"
 AreaLevel >= 65
 SetFontSize 18
 SetBackgroundColor 20 20 0 0
@@ -688,6 +688,10 @@ Show # %D4 $type->endgame->normalcraft->any $tier->craftingwands
 	Rarity Normal
 	BaseType == "Attuned Wand" "Siphoning Wand"
 	SetBorderColor 122 87 0
+	PlayAlertSound 3 300
+	PlayEffect Green Temp
+	MinimapIcon 1 Green Diamond
+
 
 #------------------------------------
 #   [0805] Normal, Magic Crafting: Endgame Progression
@@ -1199,9 +1203,18 @@ BaseEnergyShield > 0
 BaseEvasion > 0
 BaseArmour 0
 Rarity Rare
-Class == "Foci" "Gloves" "Helmets" "Shields"
+Class == "Foci" "Gloves" "Helmets" "Shields" "Boots"
 SetFontSize 18
 SetBackgroundColor 20 20 0 0
+
+Hide  # $type->endgame->conditionalhiders->rare $tier->eveshider
+ItemLevel >= 65
+BaseEvasion > 0
+Rarity Rare
+Class == "Gloves" "Helmets"
+SetFontSize 18
+SetBackgroundColor 20 20 0 0
+
 
 #===============================================================================================================
 # [[1400]] Endgame - Rare - Gear
@@ -2000,7 +2013,7 @@ Show # $type->waystones $tier->enchanted
 	SetTextColor 255 255 255 255
 	SetBorderColor 255 255 255 255
 	SetBackgroundColor 180 45 123 255
-	PlayAlertSound 12 300
+	PlayAlertSound 4 300
 	PlayEffect Pink
 	MinimapIcon 1 Pink Square
 
@@ -2032,7 +2045,7 @@ Show # $type->waystones $tier->waystone_t15
 	SetTextColor 0 0 0 255
 	SetBackgroundColor 235 235 235 255
 	PlayEffect White
-	PlayAlertSound 12 300
+	PlayAlertSound 3 300
 	MinimapIcon 1 White Square
 
 # !! Waypoint c9.waystone.generic.t14 : "Waystones - t12-t14"
@@ -2208,7 +2221,7 @@ Show # $type->currency $tier->b
 	SetBackgroundColor 240 90 35 255
 	PlayAlertSound 2 300
 	PlayEffect Yellow
-	MinimapIcon 1 Yellow Circle
+	MinimapIcon 1 Orange Circle
 
 Show # $type->currency $tier->c
 	Class == "Stackable Currency"
@@ -2217,7 +2230,6 @@ Show # $type->currency $tier->c
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 249 140 25 255
-	PlayAlertSound 2 300
 	PlayEffect White
 	MinimapIcon 1 Yellow Circle
 
@@ -2711,7 +2723,7 @@ Show # $type->fragments->generic $tier->b
 	MinimapIcon 1 Yellow Hexagon
 
 Show # $type->fragments->generic $tier->c
-	BaseType == "Breach Precursor Tablet" "Expedition Precursor Tablet" "Overseer Precursor Tablet" "Delirium Precursor Tablet" 
+	BaseType == "Breach Precursor Tablet" "Expedition Precursor Tablet" "Overseer Precursor Tablet"
 	SetFontSize 42
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
@@ -2756,13 +2768,13 @@ Show # $type->fragments->generic $tier->restex
 # !! Waypoint c10.ascendancy.all : "Trial Keys"
 
 Show # $type->miscmapitemsextra $tier->trialkeyultimatumreward
-	Rarity Magic Rare Unique
+	ItemLevel >= 80
 	BaseType == "Inscribed Ultimatum"
 	SetFontSize 42
 	SetTextColor 0 0 0 255
 	SetBorderColor 0 0 0 255
 	SetBackgroundColor 180 75 225 255
-	MinimapIcon 0 Red Hexagon
+	MinimapIcon 0 Grey Square
 
 Hide # %HS4 $type->miscmapitemsextra $tier->trialkeysanctumtop
 	ItemLevel >= 80
